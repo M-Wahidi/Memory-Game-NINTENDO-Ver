@@ -5,9 +5,23 @@ const playerName = document.querySelector('.name');
 let wrongScore = document.querySelector('.score');
 let blockContainer = document.querySelector('.game-block');
 let flipSpeed = 1000;
-let cards = document.querySelectorAll('.card')
+let cards = document.querySelectorAll('.card');
+let timer = document.querySelector('.timer span');
+timer.innerHTML = 30;
 
 
+// function set timer
+function setTimer() {
+    setInterval(() => {
+        timer.textContent <= 0 ? clearInterval() : timer.textContent -= 1;
+
+    }, 1000);
+}
+
+// set background music
+function bg_music() {
+    timer.innerHTML >= 0 ? document.getElementById('bg-music').play() : document.getElementById('bg-music').pause()
+}
 
 // start Game Screen
 startButton.addEventListener('click', () => {
@@ -20,6 +34,10 @@ startButton.addEventListener('click', () => {
     }
     // remove the start screen and strat the flip game
     startScreen.remove();
+    // start counter after we enter the name
+    setTimer()
+    bg_music()
+
 })
 
 //store the cards in orderRange Array
