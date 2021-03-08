@@ -97,9 +97,11 @@ html,body {
     align-content: center;
     justify-content: center;
     max-width: 900px;
-    height: 800px;
-    position: fixed;
-    top:1rem
+    height: auto;
+    position: relative;
+    top: 5%;
+
+    
   }
   .game-block.no-click{
   pointer-events: none;
@@ -113,6 +115,7 @@ html,body {
     position: relative;
     transition: transform 0.5s;
     display: flex;
+    perspective: 1000px;
     justify-content: center;
     align-items: center;
   }
@@ -121,6 +124,7 @@ html,body {
     width: 100%;
     height: 100%;
     text-align: center;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border: 3px solid rgb(165, 165, 228);
   }
@@ -134,10 +138,12 @@ html,body {
     background-color: #333;
     height: 100%;
     width: 100%;
-    backface-visibility: hidden;
   }
   .back {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+   
   }
   
   .front::before {
@@ -155,13 +161,15 @@ html,body {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     pointer-events: none;
   }
   .scoreScreen{
     height: 300px;
     width: 400px;
     z-index: 2;
-    position: relative;
+    position: absolute;
     border-radius: 10px;
     background: url('https://wallup.net/wp-content/uploads/2016/01/270962-Mario_Bros.-video_games-Nintendo-748x468.jpg') center no-repeat;
     background-size: cover;
@@ -487,6 +495,7 @@ html,body {
     height: 100%;
     text-align: center;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     border: 3px solid rgb(165, 165, 228);
   }
   .back img {
@@ -499,7 +508,6 @@ html,body {
     background-color: #333;
     height: 100%;
     width: 100%;
-    backface-visibility: hidden;
   }
   .back {
     transform: rotateY(180deg);
@@ -521,12 +529,14 @@ html,body {
     -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
     pointer-events: none;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
   .scoreScreen{
     height: 300px;
     width: 300px;
     z-index: 2;
-    position: relative;
+    position: absolute;
     border-radius: 10px;
     background: url('https://wallup.net/wp-content/uploads/2016/01/270962-Mario_Bros.-video_games-Nintendo-748x468.jpg') center no-repeat;
     background-size: cover;
