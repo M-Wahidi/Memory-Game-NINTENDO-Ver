@@ -8,5 +8,7 @@
 - LocalStorage (Your score wil save on localStorage in your browser)
 - all card using differnt character from nintendo franchies
 - background music and more
+- Mobile Responsive
 
-## https://m-wahidi.github.io/Memory-Game-NINTENDO-Ver/
+
+[Play the game and enjoy](https://m-wahidi.github.io/Memory-Game-NINTENDO-Ver/)
