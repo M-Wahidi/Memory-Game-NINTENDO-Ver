@@ -125,6 +125,7 @@ html,body {
     height: 100%;
     text-align: center;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     border: 3px solid rgb(165, 165, 228);
   }
@@ -163,7 +164,10 @@ html,body {
     transform: rotateY(180deg);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+
     pointer-events: none;
+
   }
   .scoreScreen{
     height: 300px;
@@ -496,6 +500,7 @@ html,body {
     text-align: center;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     border: 3px solid rgb(165, 165, 228);
   }
   .back img {
@@ -531,6 +536,7 @@ html,body {
     pointer-events: none;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
   }
   .scoreScreen{
     height: 300px;

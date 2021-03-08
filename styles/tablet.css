@@ -127,6 +127,7 @@ html,body {
     text-align: center;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     border: 3px solid rgb(165, 165, 228);
   }
   .back img {
@@ -162,6 +163,8 @@ html,body {
     pointer-events: none;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+
   }
   .scoreScreen{
     height: 300px;
