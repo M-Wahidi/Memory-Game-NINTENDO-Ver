@@ -1,0 +1,371 @@
+
+/* // Mobile lg styles */
+html,body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url('https://wallpaper.dog/large/5511262.jpg') no-repeat center;
+  background-size:cover;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+  @media screen and (min-width:768px) and  (max-width:1023px){
+  
+  .start-game-screen {
+    top: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(121, 159, 191, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .start-game-screen .start-button {
+    padding: 10px 15px;
+    background-color: #e1ad01;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+
+ 
+  }
+  .mute{
+    position: absolute;
+    right: 1rem;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+    user-select: none;
+    top:50%;
+    height: auto;
+    transform: translateY(-50%);
+    right: 3rem;
+  }
+  .fa-volume-mute{
+    font-size: 1.7rem;
+    background-color: #fff;
+    color: rgb(39, 189, 71);
+    transition: all 0.1s ease-in-out;
+  }
+  .mute:focus{
+    outline: none;
+  }
+  .mute:hover > .fa-volume-mute
+  {
+    color: #e1ad01;
+    font-size: 2.2rem;
+  }
+  .mute.active > .fa-volume-mute{
+    color: #e1ad01;
+  }
+  .info-container {
+    background-color: #fff;
+    width: 750px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border-radius: 5px;
+    padding: 0 10px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    position: fixed;
+    top:1rem;
+  }
+  .info-container img {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+  }
+  .timer{
+    right: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .game-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    max-width: 900px;
+    height: 800px;
+    position: fixed;
+    top:6rem
+  }
+  .game-block.no-click{
+  pointer-events: none;
+  }
+  .card {
+    width: 150px;
+    height: 170px;
+    margin: 7px 1px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    border: 3px solid rgb(165, 165, 228);
+  }
+  .back img {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  .front {
+    background-color: #333;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+  .back {
+    transform: rotateY(180deg);
+  }
+  
+  .front::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "!";
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7rem;
+    
+  }
+  .card.is-flipped,
+  .card.correct {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    pointer-events: none;
+  }
+  .scoreScreen{
+    height: 300px;
+    width: 400px;
+    z-index: 2;
+    position: relative;
+    border-radius: 10px;
+    background: url('https://wallup.net/wp-content/uploads/2016/01/270962-Mario_Bros.-video_games-Nintendo-748x468.jpg') center no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 4rem;
+    user-select: none;
+  }
+  
+
+  .scoreScreen h1 {
+    font-size: 1.1rem !important;
+  }
+  .scoreScreen.open{
+    animation: fadeIn 1s ease-in forwards;
+   }
+   
+   @keyframes fadeIn{
+     0%{
+       opacity: 0;
+     }
+     100%{
+       opacity: 1;
+     }
+   }
+  
+   
+  .closeButton{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    top:0.5rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .closeButton:hover{
+    color: #e1ad01;
+  }
+  
+  
+  .fa-redo{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 15px;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.5);   
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    transition: all 0.1s ease-in;
+  
+  
+  }
+  .fa-redo:hover{
+    color: #e1ad01;
+    font-size: 2.8rem;
+  }
+  
+
+  
+
+  
+    
+    .fa-trophy{
+      font-size: 1.6rem;
+      background-color: #fff;
+      color: #e1ad01;
+      transition: all 0.1s ease-in-out;
+    }
+   .leader-Board-Button:focus{
+      outline: none;
+    }
+    .leader-Board-Button:hover > .fa-trophy
+    {
+      color: #e1ad01;
+      font-size: 1.8rem;
+    }
+    .leader-Board-Button.active > .fa-trophy{
+      color: #e1ad01;
+    }
+    .leaderBoard{
+      height: 300px;
+      width: 400px;
+      border-radius: 10px;
+      background: url('https://cdn.cultofmac.com/wp-content/uploads/2014/11/Screen-Shot-2014-11-28-at-11.17.00-AM.jpg') center no-repeat;
+      background-size: cover;
+      font-family: Arial, Helvetica, sans-serif;
+      display: none;
+      flex-direction: column;
+      user-select: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 3 !important; 
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .open-LeadrBoard{
+      display: flex;
+    
+    }
+    .leaderBoard h1{
+      padding-top: 5px;
+      text-align: center;
+      color: #333;
+      font-size: 0.8rem;
+      
+    }
+    
+    .leaderBoard p{
+      font-size: 0.8rem;
+      width: 100px;
+      word-wrap: break-word;
+    }
+      
+    .my-custom-scrollbar {
+      position: relative;
+      height: 50%;
+      width: 90%;
+      overflow: auto;
+      text-align: center;
+      font-size: 1rem;
+      }
+      thead{
+        background-color: rgb(162, 214, 214);
+        background-color: #798738;
+        border: 2px #606C78 solid;
+        border-radius: 20px;
+        color: rgba(29, 12, 12, 0.822);
+        font-size: 0.9rem;
+        text-shadow: 2px 2px rgba(136, 57, 57, 0.7);
+  
+      }
+      td{
+        background: #fff;
+        font-size: 0.9rem;
+
+        
+      }
+      .table-wrapper-scroll-y {
+      display: block;
+      }
+    
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+    
+ 
+   .leader-Board-Button{
+        position: absolute;
+        border: none;
+        background-color: none;
+        cursor: pointer;
+        user-select: none;
+        right: 6rem;
+      }
+    
+      .fa-trophy{
+        font-size: 1.6rem;
+        background-color: #fff;
+        color: #e1ad01;
+        transition: all 0.1s ease-in-out;
+        
+      }
+     .leader-Board-Button:focus{
+        outline: none;
+      }
+      .leader-Board-Button:hover > .fa-trophy
+      {
+        color: #e1ad01;
+        font-size: 1.8rem;
+      }
+      .leader-Board-Button.active > .fa-trophy{
+        color: #e1ad01;
+      }
+   
+    }

@@ -5,20 +5,36 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="styles/desktop.css" />
+  <link rel="stylesheet" href="styles/tablet.css" />
+  <link rel="stylesheet" href="styles/mobile.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="shortcut icon" href="#">
   <title>Memory-Game</title>
 </head>
 
-<body>
+<body class="body" scroll="no" style="overflow: hidden">
   <div class="start-game-screen">
     <span class="start-button">Strat Game</span>
   </div>
   <div class="info-container">
     <div>Name: <span class="name"></span></div>
-    <img src="imgs/logo.jpg" alt="">
+
+    <button class="leader-Board-Button">
+      <i class="fas fa-trophy"></i>
+    </button>
+
+
+    <button class="mute">
+      <i class="fas fa-volume-mute"></i>
+    </button>
+
+
+    <img src="imgs/logo.png" alt="">
     <div class="timer">Time: <span></span></div>
-    <div>Score:<span class="score">0</span></div>
+    <div>Wrong Tires:<span class="score">0</span></div>
   </div>
 
   <div class="game-block">
@@ -185,8 +201,28 @@
   <audio id="success" src="audio/correct-audio.mp3" preload="auto"></audio>
   <audio id="fail" src="audio/wrong-audio.mp3" preload="auto"></audio>
   <audio id="bg-music" src="audio/backround-m.mp3" preload="auto"></audio>
+  <audio id="win-music" src="audio/winning.mp3" preload="auto"></audio>
+  <audio id="lose-music" src="audio/failed.mp3" preload="auto"></audio>
+  <div class="leaderBoard">
+    <h1>LeaderBoard...</h1>
+    <p>Wait the Game to Finish to Show All the Scores</p>
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+      <table class="table table-bordered table-striped mb-0">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Player Name</th>
+            <th scope="col">Time Left</th>
+            <th scope="col">Wrong Tries</th>
+          </tr>
+        </thead>
+        <tbody class="t-body">
 
+        </tbody>
+      </table>
 
+    </div>
+  </div>
   <script src="script.js" defer></script>
 </body>
 
